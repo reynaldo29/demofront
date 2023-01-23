@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
-import Card from "./components/PeopleCards";
-import { get } from "./services";
-import "./App.css";
+import { useState,useEffect } from 'react'
+import Card from "./components/PeopleCards"
+import CreateButtom from "./components/CreateButtom"
+import Modal2 from "./components/Modal"
+import {get} from "./services";
+import './App.css'
 
 function App() {
   const [people, setPeople] = useState([]);
@@ -12,14 +14,21 @@ function App() {
     setPeople(people.data);
   }
 
-  useEffect(() => {
-    getPeople();
-  });
+  useEffect(()=>{
+    getPeople()
+  })
+  
+  
 
-  return (
-    <div>
+  return (  
+
+      <>
+      <CreateButtom />
+      <Modal2/>
+      <br></br>
       <Card people={people} />
-    </div>
+      </>
+    
   );
 }
 
