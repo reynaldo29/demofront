@@ -1,36 +1,26 @@
-import { useState,useEffect } from 'react'
-import Card from "./components/PeopleCards"
-import {get} from "./services";
-import './App.css'
+import { useState, useEffect } from "react";
+import Card from "./components/PeopleCards";
+import { get } from "./services";
+import "./App.css";
 
 function App() {
-  
-  const [people,setPeople] = useState([]);
+  const [people, setPeople] = useState([]);
 
-  async function getPeople(){
+  async function getPeople() {
     const people = await get("/people");
-    setPeople(people.data)
+    console.log(people.data)
+    setPeople(people.data);
   }
 
-  useEffect(()=>{
-    getPeople()
-  })
-  
-  
+  useEffect(() => {
+    getPeople();
+  });
 
   return (
-    
-    
     <div>
-      <Card people={people}/>
-      
-    
-      
-     
-      
-     
+      <Card people={people} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

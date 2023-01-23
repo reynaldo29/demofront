@@ -1,21 +1,16 @@
 import "./card.css";
 
+const Card = ({ people }) => {
+  return (
 
-const Card = ({people})=>{
-    return(
-        <div className="cards">
-
-            <div className="card">
-            { people.map((x) => (
-        x.name
-
-            
-    )
-    
-    )}  
-            </div>
+    <div className="cards">
+         {people.map(({name}) => 
+      <div className="card">
+          {name}
         </div>
-    )
-}
+        )}
+    </div>
+  );
+};
 
 export default Card;
