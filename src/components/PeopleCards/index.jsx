@@ -4,17 +4,13 @@ import "./card.css";
 const Card = ({people})=>{
     return(
         <div className="cards">
-
+            { people.map(({name,age}) => (
             <div className="card">
-            { people.map((x) => (
-        x.name
-
-            
-    )
-    
-    )}  
+               <p>{name}{age}</p> 
             </div>
+            ))}  
         </div>
+        
     )
 }
 

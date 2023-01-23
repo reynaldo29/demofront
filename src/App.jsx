@@ -1,5 +1,7 @@
 import { useState,useEffect } from 'react'
 import Card from "./components/PeopleCards"
+import CreateButtom from "./components/CreateButtom"
+import Modal2 from "./components/Modal"
 import {get} from "./services";
 import './App.css'
 
@@ -18,19 +20,16 @@ function App() {
   
   
 
-  return (
+  return (  
+
+      <>
+      <CreateButtom />
+      <Modal2/>
+      <br></br>
+      <Card people={people} />
+      </>
     
-    
-    <div>
-      <Card people={people}/>
-      
-    
-      
-     
-      
-     
-    </div>
-  )
+  );
 }
 
 export default App
