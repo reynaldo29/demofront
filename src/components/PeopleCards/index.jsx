@@ -1,8 +1,5 @@
 import "./card.css";
 
-const Card = ({ people }) => {
-  return (
-
 const Card = ({people})=>{
     return(
         <div className="cards">

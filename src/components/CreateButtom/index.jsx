@@ -1,8 +1,8 @@
 import "./buttom.css";
 
-const ButtomCreate = () => {
+const ButtomCreate = ({setModal}) => {
     return(
-        <div className="buttom">
+        <div onClick={()=>setModal(true)} className="buttom">
             Crear
         </div>
     
